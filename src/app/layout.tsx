@@ -33,7 +33,12 @@ export default function RootLayout({
           fontCode.variable
         )}
       >
-        {children}
+        <div className="flex flex-col min-h-screen">
+          <div className="flex-grow">{children}</div>
+          <footer className="py-4 text-center text-sm text-muted-foreground">
+            Made by CipherSquad
+          </footer>
+        </div>
         <Toaster />
       </body>
     </html>
