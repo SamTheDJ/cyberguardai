@@ -2,6 +2,10 @@
 
 CyberGuard AI is an autonomous AI-powered cyber defense agent built with Next.js and Genkit. It provides real-time threat detection, analysis, and mitigation capabilities.
 
+### 📄 Project Documentation
+
+[View the full Technical Report (PDF)](https://github.com/SamTheDJ/cyberguardai/blob/main/project_report.pdf)
+
 ## Features
 
 - **Dashboard Overview**: Live metrics and a feed of recent threat events.
