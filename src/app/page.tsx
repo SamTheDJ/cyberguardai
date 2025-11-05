@@ -4,12 +4,14 @@ import {
   Network,
   MailWarning,
   Code2,
+  SearchCheck,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DashboardOverview } from "@/components/dashboard-overview";
 import { NetworkAnalysis } from "@/components/network-analysis";
 import { PhishingGuard } from "@/components/phishing-guard";
 import { VulnerabilityPatching } from "@/components/vulnerability-patching";
+import { SafeSearch } from "@/components/safe-search";
 import { Logo } from "@/components/icons";
 
 export default function Home() {
@@ -23,7 +25,7 @@ export default function Home() {
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4 sm:px-8 sm:py-6">
         <Tabs defaultValue="dashboard" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 h-auto">
             <TabsTrigger value="dashboard">
               <ShieldCheck className="mr-2" />
               Dashboard
@@ -40,6 +42,10 @@ export default function Home() {
               <Code2 className="mr-2" />
               Code Integrity
             </TabsTrigger>
+            <TabsTrigger value="safe-search">
+              <SearchCheck className="mr-2" />
+              Safe Search
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="dashboard" className="mt-4">
             <DashboardOverview />
@@ -52,6 +58,9 @@ export default function Home() {
           </TabsContent>
           <TabsContent value="vulnerabilities" className="mt-4">
             <VulnerabilityPatching />
+          </TabsContent>
+          <TabsContent value="safe-search" className="mt-4">
+            <SafeSearch />
           </TabsContent>
         </Tabs>
       </main>

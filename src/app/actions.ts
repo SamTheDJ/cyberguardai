@@ -5,6 +5,8 @@ import { reasoningForDeception } from "@/ai/flows/reasoning-for-deception";
 import { summarizePhishingReport } from "@/ai/flows/summarize-phishing-report";
 import { generateSecurityPatch } from "@/ai/flows/generate-security-patch";
 import { reasoningForPatch } from "@/ai/flows/reasoning-for-patch";
+import { safeSearch } from "@/ai/flows/safe-search";
+
 
 import { networkTrafficData, type Vulnerability } from "@/lib/data";
 
@@ -57,4 +59,9 @@ export async function getPatchReasoning(vuln: Vulnerability, patchCode: string) 
         proposedPatch: patchCode
     });
     return result;
+}
+
+export async function handleSafeSearch(textOrLink: string) {
+  const result = await safeSearch({ textOrLink });
+  return result;
 }
